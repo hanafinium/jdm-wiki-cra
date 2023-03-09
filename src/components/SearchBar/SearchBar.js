@@ -6,9 +6,9 @@ function SearchBar(props) {
     <section>
       <form>
         <input type="text" name="searchText" className="searchText" />
-        <Button type="submit" name="searchButton">
+        <button type="submit" name="searchButton">
           Search
-        </Button>
+        </button>
       </form>
     </section>
   );
