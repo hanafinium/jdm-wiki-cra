@@ -15,8 +15,7 @@ router.get("/", async (req, res) => {
 
 router.post("/add", async (req, res) => {
   const newPost = req.body;
-  console.log(newPost);
-  newPost.date = new Date();
+  newPost.date = Date.now();
   const result = await db.collection("japanese-cars").insertOne(newPost);
   res.send(result).status(201).end();
 });
@@ -27,6 +26,7 @@ router.get("/:brandId", async (req, res) => {
     .collection("japanese-cars")
     .find({ brand: brand })
     .toArray();
+  console.log(data);
   res.send(data).status(200).end();
 });
 

@@ -4,7 +4,7 @@ import cors from "cors";
 import posts from "./routes/posts.js";
 import db from "./db/connection.js";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000; //changed from 3000 to test proxying
 const app = express();
 
 app.use(cors());
@@ -15,7 +15,8 @@ app.get("/", async (req, res) => {
   const data = await db
     .collection("japanese-cars")
     .find({})
-    .limit(10)
+    .sort({ date: -1 })
+    .limit(5)
     .toArray();
   res.send(data).status(200).end();
 });

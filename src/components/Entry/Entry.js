@@ -4,7 +4,7 @@ import "./entry.css";
 function Entry(props) {
   return (
     <div>
-      <p>Database entry</p>
+      <p>{props.item.brand.toUpperCase()} {props.item.model.toUpperCase()} - Added on: {Intl.DateTimeFormat('en-GB').format(props.item.date)}</p> 
     </div>
   );
 }
