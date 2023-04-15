@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Home from "./routes/home.js";
-import Brand from "./routes/brand.js";
+import BrandPage from "./routes/brandPage.js";
 import Model from "./routes/model.js";
+import AddPost from "./routes/addPost.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals.js";
 
 
-const router = createBrowserRouter([{ path: "/", element: <Home /> },{path: "/posts/:brandId", element: <Brand/>}, {path: "/posts/:brandId/:modelId", element: <Model/>}]);
+const router = createBrowserRouter([{ path: "/", element: <Home /> },{path: "/posts/:brandId", element: <BrandPage/>}, {path: "/posts/:brandId/:modelId", element: <Model/>},{path:"/posts/add", element: <AddPost/>}]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

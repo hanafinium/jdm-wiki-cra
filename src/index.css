@@ -1,15 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 body {
   margin: 0;
-  padding: 0 10%;
+  padding: 0 15%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: steelblue;
+  background-color: #FCFCD5;
+  color: #2F4858;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[class="latest-entry"] {
+  text-decoration: underline;
+  color: orange;
+}
+
+.header {
+  font-weight: 600;
+  font-family: 'Roboto Slab', serif;
+}
+
+.large-font {
+  font-size: 45px;
+}
+
+.medium-font {
+  font-size: 28px;
+}
+
+.homepage-section {
+  margin: 2rem 0;
+}
+
+input, select {
+  height: 2.5rem;
+  width: 10.5rem;
+  padding-left: 10px;
+}
+
+label {
+  font-size: 22px;
+}
+
+.detailsContainer {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+table {
+  width: 75%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: lightgray;
+}
+
+td, th {
+  border: 1px solid darkgray;
+  padding: 1rem;
+}
+
+td {
+  text-align: center;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.add-form > div {
+  margin: 10px 0;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 6rem;
+  margin: 16px 16px 16px 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: lightgray;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  border: none;
+  color: steelblue;
+  background-color: lightgray;
+}
+
+.form-sections > input, select {
+  margin: 10px 10px 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.brand-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  background-color: #FCFCD5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

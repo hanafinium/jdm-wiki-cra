@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.main-navigation {
+    font-family: 'Roboto Slab', serif;
+    border-bottom: 2px solid #2F4858;
+    margin-bottom: 1rem;
+}
+
+.nav-title {
+    font-size: 45px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-description {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    font-style: italic;
+}

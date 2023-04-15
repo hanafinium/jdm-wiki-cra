@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import SearchBar from "../components/SearchBar/SearchBar.js";
-import RecentEntries from "../components/RecentEntries/RecentEntries.js";
+import MainNavigation from "../components/mainNavigation/MainNavigation.js";
+import BrandNavigation from "../components/BrandNavigation/BrandNavigation.js";
 import Entry from "../components/Entry/Entry.js";
 
 function Home(props) {
@@ -11,22 +11,23 @@ function Home(props) {
       let results = await fetch(`http://localhost:5000/`).then((resp) =>
         resp.json()
       );
-      console.log(results);
       setLatest(results);
     };
     getLatest();
   }, []);
   return (
-    <div>
-      <SearchBar />
-      <section>
-        <p>Latest additions</p>
+    <React.Fragment>
+      <MainNavigation/>
+      <section className="homepage-section">
+        <BrandNavigation/>
       </section>
-      {latest.map((item, index) => (
-        // <p key={index}>{item.brand} {item.model}</p>
-        <Entry key={index} item={item}/>
-      ))}
-    </div>
+      <section className="homepage-section">
+        <p className="medium-font header">Latest additions</p>
+        {latest.map((item, index) => (
+          <Entry key={index} item={item}/>
+        ))}
+      </section>
+    </React.Fragment>
   );
 }
 
