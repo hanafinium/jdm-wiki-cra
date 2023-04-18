@@ -111,12 +111,15 @@ button {
   color: lightgray;
   background-color: transparent;
   cursor: pointer;
+  transition: box-shadow 0.5s;
 }
 
 button:hover {
   border: none;
   color: steelblue;
   background-color: lightgray;
+  box-shadow: 8px 5px  black;
+
 }
 
 .form-sections > input, select {
