@@ -5,3 +5,13 @@
 .brand-logos a {
     margin: 1rem;
 }
+
+@media (max-width: 650px) {
+    .brand-logos {
+        padding: 0;
+    }
+
+    .brand-logos a {
+        margin: 2rem 1.5rem;
+    }
+}

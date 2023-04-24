@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MainNavigation from "../components/mainNavigation/MainNavigation.js";
+import MainNavigation from "../components/MainNavigation/MainNavigation.js";
 import ModelDetails from "../components/ModelDetails/ModelDetails.js";
 
 function BrandPage() {

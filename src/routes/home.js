@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import MainNavigation from "../components/mainNavigation/MainNavigation.js";
+import MainNavigation from "../components/MainNavigation/MainNavigation.js";
 import BrandNavigation from "../components/BrandNavigation/BrandNavigation.js";
 import Entry from "../components/Entry/Entry.js";
 

@@ -17,11 +17,11 @@ function EngineDetails(props) {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{engine.engineDisplacement}</td>
-                                <td>{engine.engineHP}</td>
-                                <td>{engine.engineTorque}</td>
-                                <td>{engine.cylinders}</td>
-                                <td>{engine.engineConfiguration}</td>
+                                <td data-cell="dipsplacement">{engine.engineDisplacement}</td>
+                                <td data-cell="horsepower">{engine.engineHP}</td>
+                                <td data-cell="torque">{engine.engineTorque}</td>
+                                <td data-cell="cylinders">{engine.cylinders}</td>
+                                <td data-cell="configuration">{engine.engineConfiguration}</td>
                             </tr>
                         </tbody>
                     </table>

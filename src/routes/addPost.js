@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import MainNavigation from '../components/mainNavigation/MainNavigation.js';
+import MainNavigation from '../components/MainNavigation/MainNavigation.js';
 
 function AddPost() {
     const [maker, setMaker] = useState("")
@@ -65,7 +65,7 @@ function AddPost() {
                         <input type="number" name='cylinders' id='cylinders-input' placeholder='cylinders' value={cylinders} onChange={(ev)=> setCylinders(ev.target.value)} required></input>
                         <select name='configuration' id='config-input' value={engineConfiguration} onChange={(ev)=>setEngineConfiguration(ev.target.value)} required>
                             <option value="">--Select Config--</option>
-                            <option value="straight">inline</option>
+                            <option value="inline">inline</option>
                             <option value="v-shape">v-shape</option>
                             <option value="w-shape">w-shape</option>
                         </select>

@@ -139,3 +139,32 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media (max-width: 650px) {
+  body {
+    padding: 0 5%;
+  }
+
+  img {
+    width: 110px;
+    height: 75px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    display: block;
+  }
+
+  td::before {
+    content: attr(data-cell) ": ";
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}

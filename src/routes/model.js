@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import MainNavigation from '../components/mainNavigation/MainNavigation.js';
+import MainNavigation from '../components/MainNavigation/MainNavigation.js';
 import { useParams } from 'react-router-dom';
 
 function Model() {
