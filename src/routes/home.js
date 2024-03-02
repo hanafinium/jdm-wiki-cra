@@ -4,30 +4,36 @@ import MainNavigation from "../components/MainNavigation/MainNavigation.js";
 import BrandNavigation from "../components/BrandNavigation/BrandNavigation.js";
 import Entry from "../components/Entry/Entry.js";
 
-function Home(props) {
+function Home() {
   const [latest, setLatest] = useState([]);
   useEffect(() => {
     const getLatest = async () => {
-      let results = await fetch(`http://localhost:5000/`).then((resp) =>
-        resp.json()
-      );
-      setLatest(results);
+      try {
+        const resp = await fetch("http://localhost:3000/api", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+        if (!resp.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const latestEntries = await resp.json();
+        setLatest(latestEntries);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
     getLatest();
   }, []);
   return (
-    <React.Fragment>
-      <MainNavigation/>
-      <section className="homepage-section">
-        <BrandNavigation/>
-      </section>
-      <section className="homepage-section">
-        <p className="medium-font header">Latest additions</p>
-        {latest.map((item, index) => (
-          <Entry key={index} item={item}/>
+    <div>
+      <MainNavigation />
+      <div>
+        <h3>Latest entries:</h3>
+        {latest?.map((item, index) => (
+          <Entry key={index} item={item} />
         ))}
-      </section>
-    </React.Fragment>
+      </div>
+    </div>
   );
 }
 
