@@ -1,7 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import MainNavigation from "../components/mainNavigation/MainNavigation.js";
-import BrandNavigation from "../components/BrandNavigation/BrandNavigation.js";
 import Entry from "../components/Entry/Entry.js";
 
 function Home() {
@@ -26,7 +24,6 @@ function Home() {
   }, []);
   return (
     <div>
-      <MainNavigation />
       <div>
         <h3>Latest entries:</h3>
         {latest?.map((item, index) => (

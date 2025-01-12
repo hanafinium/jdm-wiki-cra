@@ -13,10 +13,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/signup", users);
+app.use("/api/users", users);
 app.use("/api/posts", posts);
 
-app.get("/api", async (req, res) => {
+/*app.get("/api", async (req, res) => {
   try {
     const data = await db
       .collection("japanese-cars")
@@ -28,7 +28,7 @@ app.get("/api", async (req, res) => {
   } catch (error) {
     res.status(500).send("Error");
   }
-});
+});*/
 
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "build")));

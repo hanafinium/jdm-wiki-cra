@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import MainNavigation from "./components/mainNavigation/MainNavigation.js";
 import Home from "./routes/home.js";
 import BrandPage from "./routes/brandPage.js";
 import Model from "./routes/model.js";
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <MainNavigation/>
     <RouterProvider router={router} />
   </React.StrictMode>
 );
