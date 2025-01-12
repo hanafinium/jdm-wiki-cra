@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import MainNavigation from "../components/MainNavigation/MainNavigation.js";
+import MainNavigation from "../components/mainNavigation/MainNavigation.js";
 import BrandNavigation from "../components/BrandNavigation/BrandNavigation.js";
 import Entry from "../components/Entry/Entry.js";
 
@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     const getLatest = async () => {
       try {
-        const resp = await fetch("http://localhost:3000/api", {
+        const resp = await fetch("/api", {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });

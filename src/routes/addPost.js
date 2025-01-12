@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MainNavigation from "../components/MainNavigation/MainNavigation.js";
+import MainNavigation from "../components/mainNavigation/MainNavigation.js";
 
 function AddPost() {
   const [maker, setMaker] = useState("");
@@ -14,7 +14,7 @@ function AddPost() {
 
   const handleSubmit = async (ev) => {
     ev.preventDefault();
-    await fetch(`http://localhost:3000/api/posts/add`, {
+    await fetch(`/api/posts/add`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -45,7 +45,7 @@ function AddPost() {
     setEngineConfiguration("");
 
     setTimeout(() => {
-      window.location = "http://localhost:3001/";
+      window.location = "http://localhost:3000/";
     }, 3000);
   };
   return (

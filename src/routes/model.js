@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import MainNavigation from "../components/MainNavigation/MainNavigation.js";
+import MainNavigation from "../components/mainNavigation/MainNavigation.js";
 import EngineDetails from "../components/EngineDetails/EngineDetails.js";
 // import { ObjectId } from "mongodb";
 
@@ -17,7 +17,7 @@ function Model() {
   useEffect(() => {
     const getModelData = async () => {
       try {
-        await fetch(`http://localhost:3000/api/posts/${brandId}/${modelId}`, {
+        await fetch(`/api/posts/${brandId}/${modelId}`, {
           method: "GET",
         })
           .then((resp) => resp.json())
@@ -36,7 +36,7 @@ function Model() {
     console.log(edits);
     try {
       const response = await fetch(
-        `http://localhost:3000/api/posts/${brandId}/${modelId}`,
+        `/api/posts/${brandId}/${modelId}`,
         {
           method: "PUT",
           body: { ...edits, _id: id },
@@ -52,7 +52,7 @@ function Model() {
   const handleDelete = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/posts/${brandId}/${modelId}`,
+        `/api/posts/${brandId}/${modelId}`,
         {
           method: "DELETE",
           body: JSON.stringify({ id: "" }), // DELETE POSSIBLY DOES NOT SEND BODY CONTENT IN THE REQUEST, ALTERNATIVELY I CAN APPEND THE ID OR THE DELETE BY MODELCODE/ENGINECODE

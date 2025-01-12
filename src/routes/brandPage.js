@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MainNavigation from "../components/MainNavigation/MainNavigation.js";
+import MainNavigation from "../components/mainNavigation/MainNavigation.js";
 import ModelDetails from "../components/ModelDetails/ModelDetails.js";
 
 function BrandPage() {
@@ -11,7 +11,7 @@ function BrandPage() {
   const { brandId } = useParams();
   useEffect(() => {
     const getBrandData = async () => {
-      let data = await fetch(`http://localhost:3000/api/posts/${brandId}`).then(
+      let data = await fetch(`/api/posts/${brandId}`).then(
         (resp) => resp.json()
       );
       let models = await data.map((entry) => entry.model);

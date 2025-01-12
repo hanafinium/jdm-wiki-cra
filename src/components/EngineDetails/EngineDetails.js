@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function EngineDetails({ modelData, engineCode }) {
-  return (
-    <React.Fragment>
-      {/*INSERT THE FORM DISPLAY IN THE NOTE FILE ON DESKTOP */}
-    </React.Fragment>
-  );
+const engine = modelData.engine.find((engine) => engine.engineCode === engineCode);
+return (
+  <React.Fragment>
+    <p>{engine.engineDisplacement}</p>
+    <p>{engine.engineHP}</p>
+  </React.Fragment>
+);
 }
 
 export default EngineDetails;

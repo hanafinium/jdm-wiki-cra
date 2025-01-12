@@ -6,7 +6,7 @@ import posts from "./routes/posts.js";
 import users from "./routes/users.js";
 import db from "./db/connection.js";
 
-const PORT = process.env.PORT || 3000; //changed from 3000 to test proxying
+const PORT = process.env.PORT || 5000; //changed from 3000 to test proxying
 const app = express();
 
 app.use(cors());

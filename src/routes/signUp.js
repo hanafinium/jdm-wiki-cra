@@ -7,7 +7,7 @@ function SignUp() {
     //form submission
     ev.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/signup", {
+      const response = await fetch("/api/signup", {
         method: "POST",
         body: { email: email, password: password },
         //   headers: { "Content-Type": "application/json" },
